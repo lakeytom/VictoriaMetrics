@@ -1,0 +1,572 @@
+name: LSIF
+on:
+    - push
+jobs:
+    lsif-go-vendor-cloud.google.com-go-storage:
+        runs-on: ubuntu-latest
+        container: sourcegraph/lsif-go
+        steps:
+            - uses: actions/checkout@v1
+            - name: Generate LSIF data
+              working-directory: vendor/cloud.google.com/go/storage
+              run: lsif-go
+            - name: Upload LSIF data
+              working-directory: vendor/cloud.google.com/go/storage
+              run: src lsif upload
+              env:
+                SRC_ACCESS_TOKEN: 0bea1b42a0445a6a6f2dcb37b2c5db7f8600dd34
+                SRC_ENDPOINT: http://localhost:80
+
+    lsif-go-vendor-cloud.google.com-go:
+        runs-on: ubuntu-latest
+        container: sourcegraph/lsif-go
+        steps:
+            - uses: actions/checkout@v1
+            - name: Generate LSIF data
+              working-directory: vendor/cloud.google.com/go
+              run: lsif-go
+            - name: Upload LSIF data
+              working-directory: vendor/cloud.google.com/go
+              run: src lsif upload
+              env:
+                SRC_ACCESS_TOKEN: 0bea1b42a0445a6a6f2dcb37b2c5db7f8600dd34
+                SRC_ENDPOINT: http://localhost:80
+
+    lsif-go-vendor-gopkg.in-yaml.v2:
+        runs-on: ubuntu-latest
+        container: sourcegraph/lsif-go
+        steps:
+            - uses: actions/checkout@v1
+            - name: Generate LSIF data
+              working-directory: vendor/gopkg.in/yaml.v2
+              run: lsif-go
+            - name: Upload LSIF data
+              working-directory: vendor/gopkg.in/yaml.v2
+              run: src lsif upload
+              env:
+                SRC_ACCESS_TOKEN: 0bea1b42a0445a6a6f2dcb37b2c5db7f8600dd34
+                SRC_ENDPOINT: http://localhost:80
+
+    lsif-go-vendor-google.golang.org-appengine:
+        runs-on: ubuntu-latest
+        container: sourcegraph/lsif-go
+        steps:
+            - uses: actions/checkout@v1
+            - name: Generate LSIF data
+              working-directory: vendor/google.golang.org/appengine
+              run: lsif-go
+            - name: Upload LSIF data
+              working-directory: vendor/google.golang.org/appengine
+              run: src lsif upload
+              env:
+                SRC_ACCESS_TOKEN: 0bea1b42a0445a6a6f2dcb37b2c5db7f8600dd34
+                SRC_ENDPOINT: http://localhost:80
+
+    lsif-go-vendor-google.golang.org-grpc:
+        runs-on: ubuntu-latest
+        container: sourcegraph/lsif-go
+        steps:
+            - uses: actions/checkout@v1
+            - name: Generate LSIF data
+              working-directory: vendor/google.golang.org/grpc
+              run: lsif-go
+            - name: Upload LSIF data
+              working-directory: vendor/google.golang.org/grpc
+              run: src lsif upload
+              env:
+                SRC_ACCESS_TOKEN: 0bea1b42a0445a6a6f2dcb37b2c5db7f8600dd34
+                SRC_ENDPOINT: http://localhost:80
+
+    lsif-go-vendor-golang.org-x-oauth2:
+        runs-on: ubuntu-latest
+        container: sourcegraph/lsif-go
+        steps:
+            - uses: actions/checkout@v1
+            - name: Generate LSIF data
+              working-directory: vendor/golang.org/x/oauth2
+              run: lsif-go
+            - name: Upload LSIF data
+              working-directory: vendor/golang.org/x/oauth2
+              run: src lsif upload
+              env:
+                SRC_ACCESS_TOKEN: 0bea1b42a0445a6a6f2dcb37b2c5db7f8600dd34
+                SRC_ENDPOINT: http://localhost:80
+
+    lsif-go-vendor-golang.org-x-xerrors:
+        runs-on: ubuntu-latest
+        container: sourcegraph/lsif-go
+        steps:
+            - uses: actions/checkout@v1
+            - name: Generate LSIF data
+              working-directory: vendor/golang.org/x/xerrors
+              run: lsif-go
+            - name: Upload LSIF data
+              working-directory: vendor/golang.org/x/xerrors
+              run: src lsif upload
+              env:
+                SRC_ACCESS_TOKEN: 0bea1b42a0445a6a6f2dcb37b2c5db7f8600dd34
+                SRC_ENDPOINT: http://localhost:80
+
+    lsif-go-vendor-github.com-go-logfmt-logfmt:
+        runs-on: ubuntu-latest
+        container: sourcegraph/lsif-go
+        steps:
+            - uses: actions/checkout@v1
+            - name: Generate LSIF data
+              working-directory: vendor/github.com/go-logfmt/logfmt
+              run: lsif-go
+            - name: Upload LSIF data
+              working-directory: vendor/github.com/go-logfmt/logfmt
+              run: src lsif upload
+              env:
+                SRC_ACCESS_TOKEN: 0bea1b42a0445a6a6f2dcb37b2c5db7f8600dd34
+                SRC_ENDPOINT: http://localhost:80
+
+    lsif-go-vendor-github.com-russross-blackfriday-v2:
+        runs-on: ubuntu-latest
+        container: sourcegraph/lsif-go
+        steps:
+            - uses: actions/checkout@v1
+            - name: Generate LSIF data
+              working-directory: vendor/github.com/russross/blackfriday/v2
+              run: lsif-go
+            - name: Upload LSIF data
+              working-directory: vendor/github.com/russross/blackfriday/v2
+              run: src lsif upload
+              env:
+                SRC_ACCESS_TOKEN: 0bea1b42a0445a6a6f2dcb37b2c5db7f8600dd34
+                SRC_ENDPOINT: http://localhost:80
+
+    lsif-go-vendor-github.com-VividCortex-ewma:
+        runs-on: ubuntu-latest
+        container: sourcegraph/lsif-go
+        steps:
+            - uses: actions/checkout@v1
+            - name: Generate LSIF data
+              working-directory: vendor/github.com/VividCortex/ewma
+              run: lsif-go
+            - name: Upload LSIF data
+              working-directory: vendor/github.com/VividCortex/ewma
+              run: src lsif upload
+              env:
+                SRC_ACCESS_TOKEN: 0bea1b42a0445a6a6f2dcb37b2c5db7f8600dd34
+                SRC_ENDPOINT: http://localhost:80
+
+    lsif-go-vendor-github.com-googleapis-gax-go-v2:
+        runs-on: ubuntu-latest
+        container: sourcegraph/lsif-go
+        steps:
+            - uses: actions/checkout@v1
+            - name: Generate LSIF data
+              working-directory: vendor/github.com/googleapis/gax-go/v2
+              run: lsif-go
+            - name: Upload LSIF data
+              working-directory: vendor/github.com/googleapis/gax-go/v2
+              run: src lsif upload
+              env:
+                SRC_ACCESS_TOKEN: 0bea1b42a0445a6a6f2dcb37b2c5db7f8600dd34
+                SRC_ENDPOINT: http://localhost:80
+
+    lsif-go-vendor-github.com-valyala-fasttemplate:
+        runs-on: ubuntu-latest
+        container: sourcegraph/lsif-go
+        steps:
+            - uses: actions/checkout@v1
+            - name: Generate LSIF data
+              working-directory: vendor/github.com/valyala/fasttemplate
+              run: lsif-go
+            - name: Upload LSIF data
+              working-directory: vendor/github.com/valyala/fasttemplate
+              run: src lsif upload
+              env:
+                SRC_ACCESS_TOKEN: 0bea1b42a0445a6a6f2dcb37b2c5db7f8600dd34
+                SRC_ENDPOINT: http://localhost:80
+
+    lsif-go-vendor-github.com-valyala-gozstd:
+        runs-on: ubuntu-latest
+        container: sourcegraph/lsif-go
+        steps:
+            - uses: actions/checkout@v1
+            - name: Generate LSIF data
+              working-directory: vendor/github.com/valyala/gozstd
+              run: lsif-go
+            - name: Upload LSIF data
+              working-directory: vendor/github.com/valyala/gozstd
+              run: src lsif upload
+              env:
+                SRC_ACCESS_TOKEN: 0bea1b42a0445a6a6f2dcb37b2c5db7f8600dd34
+                SRC_ENDPOINT: http://localhost:80
+
+    lsif-go-vendor-github.com-valyala-fastrand:
+        runs-on: ubuntu-latest
+        container: sourcegraph/lsif-go
+        steps:
+            - uses: actions/checkout@v1
+            - name: Generate LSIF data
+              working-directory: vendor/github.com/valyala/fastrand
+              run: lsif-go
+            - name: Upload LSIF data
+              working-directory: vendor/github.com/valyala/fastrand
+              run: src lsif upload
+              env:
+                SRC_ACCESS_TOKEN: 0bea1b42a0445a6a6f2dcb37b2c5db7f8600dd34
+                SRC_ENDPOINT: http://localhost:80
+
+    lsif-go-vendor-github.com-valyala-quicktemplate:
+        runs-on: ubuntu-latest
+        container: sourcegraph/lsif-go
+        steps:
+            - uses: actions/checkout@v1
+            - name: Generate LSIF data
+              working-directory: vendor/github.com/valyala/quicktemplate
+              run: lsif-go
+            - name: Upload LSIF data
+              working-directory: vendor/github.com/valyala/quicktemplate
+              run: src lsif upload
+              env:
+                SRC_ACCESS_TOKEN: 0bea1b42a0445a6a6f2dcb37b2c5db7f8600dd34
+                SRC_ENDPOINT: http://localhost:80
+
+    lsif-go-vendor-github.com-valyala-fastjson:
+        runs-on: ubuntu-latest
+        container: sourcegraph/lsif-go
+        steps:
+            - uses: actions/checkout@v1
+            - name: Generate LSIF data
+              working-directory: vendor/github.com/valyala/fastjson
+              run: lsif-go
+            - name: Upload LSIF data
+              working-directory: vendor/github.com/valyala/fastjson
+              run: src lsif upload
+              env:
+                SRC_ACCESS_TOKEN: 0bea1b42a0445a6a6f2dcb37b2c5db7f8600dd34
+                SRC_ENDPOINT: http://localhost:80
+
+    lsif-go-vendor-github.com-valyala-histogram:
+        runs-on: ubuntu-latest
+        container: sourcegraph/lsif-go
+        steps:
+            - uses: actions/checkout@v1
+            - name: Generate LSIF data
+              working-directory: vendor/github.com/valyala/histogram
+              run: lsif-go
+            - name: Upload LSIF data
+              working-directory: vendor/github.com/valyala/histogram
+              run: src lsif upload
+              env:
+                SRC_ACCESS_TOKEN: 0bea1b42a0445a6a6f2dcb37b2c5db7f8600dd34
+                SRC_ENDPOINT: http://localhost:80
+
+    lsif-go-vendor-github.com-cespare-xxhash-v2:
+        runs-on: ubuntu-latest
+        container: sourcegraph/lsif-go
+        steps:
+            - uses: actions/checkout@v1
+            - name: Generate LSIF data
+              working-directory: vendor/github.com/cespare/xxhash/v2
+              run: lsif-go
+            - name: Upload LSIF data
+              working-directory: vendor/github.com/cespare/xxhash/v2
+              run: src lsif upload
+              env:
+                SRC_ACCESS_TOKEN: 0bea1b42a0445a6a6f2dcb37b2c5db7f8600dd34
+                SRC_ENDPOINT: http://localhost:80
+
+    lsif-go-vendor-github.com-cheggaaa-pb-v3:
+        runs-on: ubuntu-latest
+        container: sourcegraph/lsif-go
+        steps:
+            - uses: actions/checkout@v1
+            - name: Generate LSIF data
+              working-directory: vendor/github.com/cheggaaa/pb/v3
+              run: lsif-go
+            - name: Upload LSIF data
+              working-directory: vendor/github.com/cheggaaa/pb/v3
+              run: src lsif upload
+              env:
+                SRC_ACCESS_TOKEN: 0bea1b42a0445a6a6f2dcb37b2c5db7f8600dd34
+                SRC_ENDPOINT: http://localhost:80
+
+    lsif-go-vendor-github.com-VictoriaMetrics-fasthttp:
+        runs-on: ubuntu-latest
+        container: sourcegraph/lsif-go
+        steps:
+            - uses: actions/checkout@v1
+            - name: Generate LSIF data
+              working-directory: vendor/github.com/VictoriaMetrics/fasthttp
+              run: lsif-go
+            - name: Upload LSIF data
+              working-directory: vendor/github.com/VictoriaMetrics/fasthttp
+              run: src lsif upload
+              env:
+                SRC_ACCESS_TOKEN: 0bea1b42a0445a6a6f2dcb37b2c5db7f8600dd34
+                SRC_ENDPOINT: http://localhost:80
+
+    lsif-go-vendor-github.com-VictoriaMetrics-metrics:
+        runs-on: ubuntu-latest
+        container: sourcegraph/lsif-go
+        steps:
+            - uses: actions/checkout@v1
+            - name: Generate LSIF data
+              working-directory: vendor/github.com/VictoriaMetrics/metrics
+              run: lsif-go
+            - name: Upload LSIF data
+              working-directory: vendor/github.com/VictoriaMetrics/metrics
+              run: src lsif upload
+              env:
+                SRC_ACCESS_TOKEN: 0bea1b42a0445a6a6f2dcb37b2c5db7f8600dd34
+                SRC_ENDPOINT: http://localhost:80
+
+    lsif-go-vendor-github.com-VictoriaMetrics-fastcache:
+        runs-on: ubuntu-latest
+        container: sourcegraph/lsif-go
+        steps:
+            - uses: actions/checkout@v1
+            - name: Generate LSIF data
+              working-directory: vendor/github.com/VictoriaMetrics/fastcache
+              run: lsif-go
+            - name: Upload LSIF data
+              working-directory: vendor/github.com/VictoriaMetrics/fastcache
+              run: src lsif upload
+              env:
+                SRC_ACCESS_TOKEN: 0bea1b42a0445a6a6f2dcb37b2c5db7f8600dd34
+                SRC_ENDPOINT: http://localhost:80
+
+    lsif-go-vendor-github.com-VictoriaMetrics-metricsql:
+        runs-on: ubuntu-latest
+        container: sourcegraph/lsif-go
+        steps:
+            - uses: actions/checkout@v1
+            - name: Generate LSIF data
+              working-directory: vendor/github.com/VictoriaMetrics/metricsql
+              run: lsif-go
+            - name: Upload LSIF data
+              working-directory: vendor/github.com/VictoriaMetrics/metricsql
+              run: src lsif upload
+              env:
+                SRC_ACCESS_TOKEN: 0bea1b42a0445a6a6f2dcb37b2c5db7f8600dd34
+                SRC_ENDPOINT: http://localhost:80
+
+    lsif-go-vendor-github.com-go-kit-log:
+        runs-on: ubuntu-latest
+        container: sourcegraph/lsif-go
+        steps:
+            - uses: actions/checkout@v1
+            - name: Generate LSIF data
+              working-directory: vendor/github.com/go-kit/log
+              run: lsif-go
+            - name: Upload LSIF data
+              working-directory: vendor/github.com/go-kit/log
+              run: src lsif upload
+              env:
+                SRC_ACCESS_TOKEN: 0bea1b42a0445a6a6f2dcb37b2c5db7f8600dd34
+                SRC_ENDPOINT: http://localhost:80
+
+    lsif-go-vendor-github.com-fatih-color:
+        runs-on: ubuntu-latest
+        container: sourcegraph/lsif-go
+        steps:
+            - uses: actions/checkout@v1
+            - name: Generate LSIF data
+              working-directory: vendor/github.com/fatih/color
+              run: lsif-go
+            - name: Upload LSIF data
+              working-directory: vendor/github.com/fatih/color
+              run: src lsif upload
+              env:
+                SRC_ACCESS_TOKEN: 0bea1b42a0445a6a6f2dcb37b2c5db7f8600dd34
+                SRC_ENDPOINT: http://localhost:80
+
+    lsif-go-vendor-github.com-rivo-uniseg:
+        runs-on: ubuntu-latest
+        container: sourcegraph/lsif-go
+        steps:
+            - uses: actions/checkout@v1
+            - name: Generate LSIF data
+              working-directory: vendor/github.com/rivo/uniseg
+              run: lsif-go
+            - name: Upload LSIF data
+              working-directory: vendor/github.com/rivo/uniseg
+              run: src lsif upload
+              env:
+                SRC_ACCESS_TOKEN: 0bea1b42a0445a6a6f2dcb37b2c5db7f8600dd34
+                SRC_ENDPOINT: http://localhost:80
+
+    lsif-go-vendor-github.com-klauspost-compress:
+        runs-on: ubuntu-latest
+        container: sourcegraph/lsif-go
+        steps:
+            - uses: actions/checkout@v1
+            - name: Generate LSIF data
+              working-directory: vendor/github.com/klauspost/compress
+              run: lsif-go
+            - name: Upload LSIF data
+              working-directory: vendor/github.com/klauspost/compress
+              run: src lsif upload
+              env:
+                SRC_ACCESS_TOKEN: 0bea1b42a0445a6a6f2dcb37b2c5db7f8600dd34
+                SRC_ENDPOINT: http://localhost:80
+
+    lsif-go-vendor-github.com-jmespath-go-jmespath:
+        runs-on: ubuntu-latest
+        container: sourcegraph/lsif-go
+        steps:
+            - uses: actions/checkout@v1
+            - name: Generate LSIF data
+              working-directory: vendor/github.com/jmespath/go-jmespath
+              run: lsif-go
+            - name: Upload LSIF data
+              working-directory: vendor/github.com/jmespath/go-jmespath
+              run: src lsif upload
+              env:
+                SRC_ACCESS_TOKEN: 0bea1b42a0445a6a6f2dcb37b2c5db7f8600dd34
+                SRC_ENDPOINT: http://localhost:80
+
+    lsif-go-vendor-github.com-mattn-go-runewidth:
+        runs-on: ubuntu-latest
+        container: sourcegraph/lsif-go
+        steps:
+            - uses: actions/checkout@v1
+            - name: Generate LSIF data
+              working-directory: vendor/github.com/mattn/go-runewidth
+              run: lsif-go
+            - name: Upload LSIF data
+              working-directory: vendor/github.com/mattn/go-runewidth
+              run: src lsif upload
+              env:
+                SRC_ACCESS_TOKEN: 0bea1b42a0445a6a6f2dcb37b2c5db7f8600dd34
+                SRC_ENDPOINT: http://localhost:80
+
+    lsif-go-vendor-github.com-mattn-go-colorable:
+        runs-on: ubuntu-latest
+        container: sourcegraph/lsif-go
+        steps:
+            - uses: actions/checkout@v1
+            - name: Generate LSIF data
+              working-directory: vendor/github.com/mattn/go-colorable
+              run: lsif-go
+            - name: Upload LSIF data
+              working-directory: vendor/github.com/mattn/go-colorable
+              run: src lsif upload
+              env:
+                SRC_ACCESS_TOKEN: 0bea1b42a0445a6a6f2dcb37b2c5db7f8600dd34
+                SRC_ENDPOINT: http://localhost:80
+
+    lsif-go-vendor-github.com-mattn-go-isatty:
+        runs-on: ubuntu-latest
+        container: sourcegraph/lsif-go
+        steps:
+            - uses: actions/checkout@v1
+            - name: Generate LSIF data
+              working-directory: vendor/github.com/mattn/go-isatty
+              run: lsif-go
+            - name: Upload LSIF data
+              working-directory: vendor/github.com/mattn/go-isatty
+              run: src lsif upload
+              env:
+                SRC_ACCESS_TOKEN: 0bea1b42a0445a6a6f2dcb37b2c5db7f8600dd34
+                SRC_ENDPOINT: http://localhost:80
+
+    lsif-go-vendor-github.com-prometheus-procfs:
+        runs-on: ubuntu-latest
+        container: sourcegraph/lsif-go
+        steps:
+            - uses: actions/checkout@v1
+            - name: Generate LSIF data
+              working-directory: vendor/github.com/prometheus/procfs
+              run: lsif-go
+            - name: Upload LSIF data
+              working-directory: vendor/github.com/prometheus/procfs
+              run: src lsif upload
+              env:
+                SRC_ACCESS_TOKEN: 0bea1b42a0445a6a6f2dcb37b2c5db7f8600dd34
+                SRC_ENDPOINT: http://localhost:80
+
+    lsif-go-vendor-github.com-golang-snappy:
+        runs-on: ubuntu-latest
+        container: sourcegraph/lsif-go
+        steps:
+            - uses: actions/checkout@v1
+            - name: Generate LSIF data
+              working-directory: vendor/github.com/golang/snappy
+              run: lsif-go
+            - name: Upload LSIF data
+              working-directory: vendor/github.com/golang/snappy
+              run: src lsif upload
+              env:
+                SRC_ACCESS_TOKEN: 0bea1b42a0445a6a6f2dcb37b2c5db7f8600dd34
+                SRC_ENDPOINT: http://localhost:80
+
+    lsif-go-vendor-github.com-urfave-cli-v2:
+        runs-on: ubuntu-latest
+        container: sourcegraph/lsif-go
+        steps:
+            - uses: actions/checkout@v1
+            - name: Generate LSIF data
+              working-directory: vendor/github.com/urfave/cli/v2
+              run: lsif-go
+            - name: Upload LSIF data
+              working-directory: vendor/github.com/urfave/cli/v2
+              run: src lsif upload
+              env:
+                SRC_ACCESS_TOKEN: 0bea1b42a0445a6a6f2dcb37b2c5db7f8600dd34
+                SRC_ENDPOINT: http://localhost:80
+
+    lsif-go-vendor-go.uber.org-atomic:
+        runs-on: ubuntu-latest
+        container: sourcegraph/lsif-go
+        steps:
+            - uses: actions/checkout@v1
+            - name: Generate LSIF data
+              working-directory: vendor/go.uber.org/atomic
+              run: lsif-go
+            - name: Upload LSIF data
+              working-directory: vendor/go.uber.org/atomic
+              run: src lsif upload
+              env:
+                SRC_ACCESS_TOKEN: 0bea1b42a0445a6a6f2dcb37b2c5db7f8600dd34
+                SRC_ENDPOINT: http://localhost:80
+
+    lsif-go-vendor-go.opencensus.io:
+        runs-on: ubuntu-latest
+        container: sourcegraph/lsif-go
+        steps:
+            - uses: actions/checkout@v1
+            - name: Generate LSIF data
+              working-directory: vendor/go.opencensus.io
+              run: lsif-go
+            - name: Upload LSIF data
+              working-directory: vendor/go.opencensus.io
+              run: src lsif upload
+              env:
+                SRC_ACCESS_TOKEN: 0bea1b42a0445a6a6f2dcb37b2c5db7f8600dd34
+                SRC_ENDPOINT: http://localhost:80
+
+    lsif-go:
+        runs-on: ubuntu-latest
+        container: sourcegraph/lsif-go
+        steps:
+            - uses: actions/checkout@v1
+            - name: Generate LSIF data
+              run: lsif-go
+            - name: Upload LSIF data
+              run: src lsif upload
+              env:
+                SRC_ACCESS_TOKEN: http://localhost:80
+                SRC_ENDPOINT: 0bea1b42a0445a6a6f2dcb37b2c5db7f8600dd34
+
+    lsif-go-app-vmui-packages-vmui-web:
+        runs-on: ubuntu-latest
+        container: sourcegraph/lsif-go
+        steps:
+            - uses: actions/checkout@v1
+            - name: Generate LSIF data
+              working-directory: app/vmui/packages/vmui/web
+              run: lsif-go
+            - name: Upload LSIF data
+              working-directory: app/vmui/packages/vmui/web
+              run: src lsif upload
+              env:
+                SRC_ACCESS_TOKEN: 0bea1b42a0445a6a6f2dcb37b2c5db7f8600dd34
+                SRC_ENDPOINT: http://localhost:80
+
